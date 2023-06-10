@@ -6,7 +6,7 @@
 }
 
 body {
-    /*background-image: url("../img/background.png");*/
+    /*background-image: url("../img/background.webp");*/
     background-color: #f0f0f0;
     background-attachment: fixed;
     font-family: "Jura", sans-serif;
@@ -132,33 +132,32 @@ a:active {
     border-bottom: 5px solid black;
 }
 
-section {
-    margin-top: 30px;
+.cont_clear {
+    margin-top: 50px;
     width: 70%;
     margin: auto;
+    margin-top: 30px;
 }
 
-.section_clear {
-    margin-top: 50px;
-}
-
-.section_fill {
+.cont_fill {
     border: 1px solid #999;
     background-color: white;
     padding: 30px;
     width: calc(70% - 60px);
+    margin: auto;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
-.section_fill a:link,
-.section_fill a:active,
-.section_fill a:visited {
+.cont_fill a:link,
+.cont_fill a:active,
+.cont_fill a:visited {
     padding: 10px 40px;
     background-color: rgb(7, 38, 66);
     transition: all .3s;
 }
 
-.section_fill a:hover {
+.cont_fill a:hover {
     background-color: red;
 }
 
@@ -221,6 +220,7 @@ section {
     color: white;
     padding: 10px;
     min-height: 50px;
+    margin-bottom: 0px;
 }
 
 .tema img {
@@ -229,6 +229,10 @@ section {
 
 .tema:hover {
     box-shadow: 15px 15px 0px rgb(7, 38, 66, 0.5);
+}
+
+.tema p.tema_active {
+    background-color: red;
 }
 
 footer {
@@ -281,9 +285,28 @@ footer {
     .footer_left, .footer_right {
         width: 100%;
     }
+    .cont_fill a:link,
+    .cont_fill a:active,
+    .cont_fill a:visited {
+        display: block;
+        width: calc(100% - 80px);
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .menu i {
+        display:none;
+    }
 }
 
 @media screen and (max-width: 600px) {
+    .cont_clear, .cont_fill {
+        width: calc(90% - 60px);
+    }
+    .cont_lg {
+        text-align: left;
+    }
     .tema_box {
         grid-template-columns: 100%;
     }
@@ -300,5 +323,8 @@ footer {
     }
     .burger_btn {
         display: block;
+    }
+    .menu i {
+        display:inline-block;
     }
 }
