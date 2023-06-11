@@ -174,8 +174,15 @@ a:active {
 .cont_lg a:link, 
 .cont_lg a:active, 
 .cont_lg a:visited {
-    color: black;
+    color: white;
     text-decoration: none;
+    background-color: rgb(7, 38, 66);
+    padding: 10px 30px;
+    transition: all .3s;
+}
+
+.cont_lg a:hover {
+    background-color: red;
 }
 
 .skill_box {
